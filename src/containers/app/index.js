@@ -4,13 +4,15 @@ import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import AppBar from 'material-ui/AppBar';
-import Home from '../home';
-import About from '../about';
 import Header from './header';
+import Section from './section';
 
 const Main = () => (
   <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
-    <Header />
+    <div>
+      <Header />
+      <Section />
+    </div>
   </MuiThemeProvider>
 );
 
