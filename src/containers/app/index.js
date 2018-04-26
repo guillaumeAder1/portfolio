@@ -1,20 +1,17 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import AppBar from 'material-ui/AppBar';
 import Home from '../home';
 import About from '../about';
+import Header from './header';
 
-const App = () => (
-  <div>
-    <header>
-      <Link to="/">Home</Link>
-      <Link to="/about-us">About</Link>
-    </header>
-
-    <main>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/about-us" component={About} />
-    </main>
-  </div>
+const Main = () => (
+  <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+    <Header />
+  </MuiThemeProvider>
 );
 
-export default App;
+export default Main;
