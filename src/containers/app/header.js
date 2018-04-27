@@ -28,8 +28,16 @@ class Header extends Component {
         />
         <Drawer open={this.state.open}>
           <Link to="/">
-            {' '}
             <MenuItem onClick={this.toggleDrawer}>Home </MenuItem>
+          </Link>
+          <Link to="/education">
+            <MenuItem onClick={this.toggleDrawer}>Education</MenuItem>
+          </Link>
+          <Link to="/education">
+            <MenuItem onClick={this.toggleDrawer}>Education</MenuItem>
+          </Link>
+          <Link to="/education">
+            <MenuItem onClick={this.toggleDrawer}>Education</MenuItem>
           </Link>
           <Link to="/education">
             <MenuItem onClick={this.toggleDrawer}>Education</MenuItem>
