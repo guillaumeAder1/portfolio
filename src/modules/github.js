@@ -2,8 +2,10 @@ import 'whatwg-fetch';
 export const FETCHING = 'github/FETCHING';
 export const FETCH_ALL_PROJECTS = 'github/FETCH_ALL_PROJECTS';
 const github = {
-  allprojects: 'https://api.github.com/users/guillaumeAder1/repos'
+  allprojects: 'https://api.github.com/users/guillaumeAder1/repos',
+  readme: '/repos/:owner/:repo/readme'
 };
+
 const initialState = {
   fetching: false,
   projects: [],

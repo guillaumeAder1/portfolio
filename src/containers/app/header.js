@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
+import { cyan500 } from 'material-ui/styles/colors';
 
 class Header extends Component {
   constructor(props) {
@@ -27,6 +28,9 @@ class Header extends Component {
             onLeftIconButtonClick={this.toggleDrawer}
             style={{
               fontFamily: 'Inconsolata'
+            }}
+            titleStyle={{
+              color: cyan500
             }}
           />
         </div>

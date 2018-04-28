@@ -22,7 +22,7 @@ const muiTheme = getMuiTheme({
   },
   appBar: {
     height: 50,
-    color: grey700
+    color: grey800
   },
   tabs: {
     backgroundColor: grey400,
@@ -30,6 +30,11 @@ const muiTheme = getMuiTheme({
   },
   fontFamily: 'Inconsolata, monospace'
 });
+
+(function() {
+  // document.querySelector('#root-bg').
+  document.body.style.backgroundImage = "url('img/bg.png')";
+})();
 
 const Main = () => (
   <MuiThemeProvider muiTheme={muiTheme}>
