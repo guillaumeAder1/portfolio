@@ -1,21 +1,55 @@
 import React from 'react';
 import Section from './section';
 import Header from './header';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import {
+  grey200,
+  grey400,
+  grey700,
+  grey900,
+  grey800,
+  fullBlack,
+  cyan700
+} from 'material-ui/styles/colors';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
+// http://materializecss.com/sidenav.html
 import 'materialize-css';
 import 'materialize-css/dist/css/materialize.min.css';
-// http://materializecss.com/sidenav.html
+
+const muiTheme = getMuiTheme({
+  palette: {
+    textColor: grey800,
+    shadowColor: fullBlack,
+    accent1Color: cyan700,
+    alternateTextColor: grey200
+  },
+  appBar: {
+    height: 50,
+    color: grey700
+  },
+  tabs: {
+    backgroundColor: grey400,
+    selectedTextColor: grey800
+  },
+  fontFamily: 'Inconsolata, monospace'
+});
+
 const Main = () => (
-  <div>
-    <Header />
-    <Section />
-    <a className="waves-effect blue-grey lighten-4 btn">button</a>
-    <a className="waves-effect blue-grey lighten-4 btn">
-      <i className="material-icons left">cloud</i>button
-    </a>
-    <a className="waves-effect blue-grey lighten-4 btn">
-      <i className="material-icons right">cloud</i>button
-    </a>
-  </div>
+  <MuiThemeProvider muiTheme={muiTheme}>
+    <div>
+      <Header />
+      <Section />
+
+      <a className="waves-effect blue-grey lighten-4 btn">button</a>
+      <a className="waves-effect blue-grey lighten-4 btn">
+        <i className="material-icons left">cloud</i>button
+      </a>
+      <a className="waves-effect blue-grey lighten-4 btn">
+        <i className="material-icons right">cloud</i>button
+      </a>
+    </div>
+  </MuiThemeProvider>
 );
 
 export default Main;
