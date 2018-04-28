@@ -13,10 +13,6 @@ import {
 } from 'material-ui/styles/colors';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-// http://materializecss.com/sidenav.html
-import 'materialize-css';
-import 'materialize-css/dist/css/materialize.min.css';
-
 const muiTheme = getMuiTheme({
   palette: {
     textColor: grey800,
@@ -40,14 +36,6 @@ const Main = () => (
     <div>
       <Header />
       <Section />
-
-      <a className="waves-effect blue-grey lighten-4 btn">button</a>
-      <a className="waves-effect blue-grey lighten-4 btn">
-        <i className="material-icons left">cloud</i>button
-      </a>
-      <a className="waves-effect blue-grey lighten-4 btn">
-        <i className="material-icons right">cloud</i>button
-      </a>
     </div>
   </MuiThemeProvider>
 );

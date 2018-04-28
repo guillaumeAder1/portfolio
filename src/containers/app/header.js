@@ -38,8 +38,8 @@ class Header extends Component {
             <Link to="/education">
               <MenuItem onClick={this.toggleDrawer}>Experience</MenuItem>
             </Link>
-            <Link to="/education">
-              <MenuItem onClick={this.toggleDrawer}>Work</MenuItem>
+            <Link to="/works">
+              <MenuItem onClick={this.toggleDrawer}>Works</MenuItem>
             </Link>
             <Link to="/education">
               <MenuItem onClick={this.toggleDrawer}>Education</MenuItem>
