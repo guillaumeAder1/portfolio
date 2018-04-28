@@ -37,8 +37,8 @@ class Searchbar extends React.Component {
       <Toolbar>
         <ToolbarGroup firstChild={true}>
           <DropDownMenu value={this.state.value} onChange={this.handleChange}>
-            <MenuItem value={1} primaryText="All Projects" />
-            <MenuItem value={2} primaryText="From Github" />
+            <MenuItem value={1} primaryText="Search Projects" />
+            <MenuItem value={2} primaryText="Github" />
             <MenuItem value={3} primaryText="Web" />
             <MenuItem value={4} primaryText="Graphic Design" />
             <MenuItem value={5} primaryText="Others" />

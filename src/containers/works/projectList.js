@@ -24,17 +24,18 @@ class ProjectList extends React.Component {
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHeaderColumn>ID</TableHeaderColumn>
             <TableHeaderColumn>Project Name</TableHeaderColumn>
+            <TableHeaderColumn>Latest Update</TableHeaderColumn>
             <TableHeaderColumn>Language</TableHeaderColumn>
           </TableRow>
         </TableHeader>
         <TableBody>
           {projects.map((item, index) => {
+            let date = new Date(item.pushed_at);
             return (
               <TableRow key={index}>
-                <TableRowColumn>{index + 1}</TableRowColumn>
                 <TableRowColumn>{item.name}</TableRowColumn>
+                <TableRowColumn>{date.toDateString()}</TableRowColumn>
                 <TableRowColumn>{item.language}</TableRowColumn>
               </TableRow>
             );
