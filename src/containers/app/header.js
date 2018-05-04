@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import AppBar from 'material-ui/AppBar';
-import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
-import { cyan500 } from 'material-ui/styles/colors';
 
 class Header extends Component {
   constructor(props) {
@@ -11,48 +7,72 @@ class Header extends Component {
     this.state = {
       open: false
     };
+    this.body = document.querySelector('body');
   }
 
-  toggleDrawer = () => {
-    this.setState({
-      open: !this.state.open
-    });
+  addclassName = toggle => {
+    if (toggle) {
+      this.body.classList.add('is-menu-visible');
+    } else {
+      this.body.classList.remove('is-menu-visible');
+    }
   };
 
   render() {
     return (
       <div>
-        <div>
-          <AppBar
-            title="GuillaumeAder.frontendDeveloper();"
-            onLeftIconButtonClick={this.toggleDrawer}
-            style={{
-              fontFamily: 'Inconsolata'
-            }}
-            titleStyle={{
-              color: cyan500
-            }}
-          />
-        </div>
-        <div>
-          <Drawer width="25%" open={this.state.open}>
-            <Link to="/">
-              <MenuItem onClick={this.toggleDrawer}>Home </MenuItem>
-            </Link>
-            <Link to="/education">
-              <MenuItem onClick={this.toggleDrawer}>Experience</MenuItem>
-            </Link>
-            <Link to="/works">
-              <MenuItem onClick={this.toggleDrawer}>Works</MenuItem>
-            </Link>
-            <Link to="/education">
-              <MenuItem onClick={this.toggleDrawer}>Education</MenuItem>
-            </Link>
-            <Link to="/education">
-              <MenuItem onClick={this.toggleDrawer}>Contact</MenuItem>
-            </Link>
-          </Drawer>
-        </div>
+        <header id="header">
+          <a href="" className="logo">
+            <strong>Forty</strong> <span>by HTML5 UP</span>
+          </a>
+          <nav>
+            <a href="#menu" onClick={e => this.addclassName(true)}>
+              Menu
+            </a>
+          </nav>
+        </header>
+
+        <nav id="menu">
+          <div className="inner">
+            <ul className="links">
+              <li>
+                <Link to="/education" onClick={e => this.addclassName(false)}>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/works" onClick={e => this.addclassName(false)}>
+                  Works
+                </Link>
+              </li>
+              <li>
+                <Link to="/education" onClick={e => this.addclassName(false)}>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/education" onClick={e => this.addclassName(false)}>
+                  Home
+                </Link>
+              </li>
+            </ul>
+            <ul className="actions vertical">
+              <li>
+                <a href="#" className="button special fit">
+                  Get Started
+                </a>
+              </li>
+              <li>
+                <a href="#" className="button fit">
+                  Log In
+                </a>
+              </li>
+            </ul>
+          </div>
+          <a className="close" onClick={e => this.addclassName(false)}>
+            Close
+          </a>
+        </nav>
       </div>
     );
   }

@@ -31,17 +31,10 @@ const muiTheme = getMuiTheme({
   fontFamily: 'Inconsolata, monospace'
 });
 
-(function() {
-  // document.querySelector('#root-bg').
-  document.body.style.backgroundImage = "url('img/bg.png')";
-})();
-
 const Main = () => (
   <MuiThemeProvider muiTheme={muiTheme}>
-    <div>
-      <Header />
-      <Section />
-    </div>
+    <Header />
+    <Section />
   </MuiThemeProvider>
 );
 

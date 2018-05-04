@@ -27,14 +27,18 @@ class Searchbar extends React.Component {
 
   handleChange = (event, index, value) => {
     this.setState({ value });
+    let isgithub = false;
     if (value === 2) {
       this.props.fetchdata('github');
+      isgithub = true;
     }
+
+    this.props.callback(isgithub);
   };
 
   render() {
     return (
-      <Toolbar>
+      <Toolbar style={{ marginTop: '150px' }}>
         <ToolbarGroup firstChild={true}>
           <DropDownMenu value={this.state.value} onChange={this.handleChange}>
             <MenuItem value={1} primaryText="Search Projects" />
@@ -70,11 +74,7 @@ class Searchbar extends React.Component {
 
 // export default Searchbar
 
-const mapStateToProps = state => ({
-  // count: state.counter.count,
-  // isIncrementing: state.counter.isIncrementing,
-  // isDecrementing: state.counter.isDecrementing
-});
+const mapStateToProps = state => ({});
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators({ fetchdata }, dispatch);

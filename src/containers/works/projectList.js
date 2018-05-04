@@ -2,14 +2,6 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { fetchdata } from '../../modules/github';
-import {
-  Table,
-  TableBody,
-  TableHeader,
-  TableHeaderColumn,
-  TableRow,
-  TableRowColumn
-} from 'material-ui/Table';
 
 class ProjectList extends React.Component {
   constructor(props) {
@@ -21,27 +13,33 @@ class ProjectList extends React.Component {
   render() {
     const projects = this.props.projects;
     return (
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHeaderColumn>Project Name</TableHeaderColumn>
-            <TableHeaderColumn>Latest Update</TableHeaderColumn>
-            <TableHeaderColumn>Language</TableHeaderColumn>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {projects.map((item, index) => {
-            let date = new Date(item.pushed_at);
-            return (
-              <TableRow key={index}>
-                <TableRowColumn>{item.name}</TableRowColumn>
-                <TableRowColumn>{date.toDateString()}</TableRowColumn>
-                <TableRowColumn>{item.language}</TableRowColumn>
-              </TableRow>
-            );
-          })}
-        </TableBody>
-      </Table>
+      <div>
+        {this.props.isvisible || (
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Last Update</th>
+                  <th>Language</th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.props.projects.map((item, index) => {
+                  let date = new Date(item.pushed_at);
+                  return (
+                    <tr key={index}>
+                      <td>{item.name}</td>
+                      <td>{date.toDateString()}</td>
+                      <td>{item.language}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
     );
   }
 }
