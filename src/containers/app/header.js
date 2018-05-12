@@ -23,7 +23,7 @@ class Header extends Component {
       <div>
         <header id="header">
           <a href="" className="logo">
-            <strong>Forty</strong> <span>by HTML5 UP</span>
+            <strong>#portfolio</strong> <span>Guillaume Ader</span>
           </a>
           <nav>
             <a href="#menu" onClick={e => this.addclassName(true)}>
@@ -43,6 +43,11 @@ class Header extends Component {
               <li>
                 <Link to="/works" onClick={e => this.addclassName(false)}>
                   Works
+                </Link>
+              </li>
+              <li>
+                <Link to="/gallery" onClick={e => this.addclassName(false)}>
+                  Gallery
                 </Link>
               </li>
               <li>

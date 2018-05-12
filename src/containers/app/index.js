@@ -32,10 +32,10 @@ const muiTheme = getMuiTheme({
 });
 
 const Main = () => (
-  <MuiThemeProvider muiTheme={muiTheme}>
+  <div>
     <Header />
     <Section />
-  </MuiThemeProvider>
+  </div>
 );
 
 export default Main;
