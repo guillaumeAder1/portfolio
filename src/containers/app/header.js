@@ -20,7 +20,7 @@ class Header extends Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         <header id="header">
           <a href="" className="logo">
             <strong>#portfolio</strong> <span>Guillaume Ader</span>
@@ -78,7 +78,7 @@ class Header extends Component {
             Close
           </a>
         </nav>
-      </div>
+      </React.Fragment>
     );
   }
 }

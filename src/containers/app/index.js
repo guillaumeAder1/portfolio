@@ -32,7 +32,7 @@ const muiTheme = getMuiTheme({
 });
 
 const Main = () => (
-  <div>
+  <div id="wrapper">
     <Header />
     <Section />
   </div>
