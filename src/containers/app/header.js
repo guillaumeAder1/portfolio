@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import style from './constant';
+import PropTypes from 'prop-types';
 
 class Header extends Component {
   constructor(props) {

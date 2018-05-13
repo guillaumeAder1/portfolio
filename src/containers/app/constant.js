@@ -5,3 +5,9 @@ const style = {
 };
 
 export default style;
+
+export const style2 = {
+  mainBg: '#2e3450',
+  secBg: '#2a2f4a',
+  header: '#2e3450'
+};

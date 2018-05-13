@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Loader from '../hoc/loader.js';
 import Slideshow from './slideshow';
 import style from '../app/constant';
+import PropTypes from 'prop-types';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class Gallery extends Component {
   constructor(props) {
@@ -16,7 +18,7 @@ class Gallery extends Component {
       this.setState({
         ready: true
       });
-    }, 300);
+    }, 1000);
   }
 
   render() {
@@ -39,16 +41,35 @@ class Gallery extends Component {
                 sagittis magna sed nunc rhoncus condimentum sem. In efficitur
                 ligula tate urna.
               </p>
+              <ul class="actions">
+                <li>
+                  <a href="#" class="button icon fa-code">
+                    Web
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="button icon fa-github">
+                    Github
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="button icon fa-pencil">
+                    Graphic Design
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="button icon fa-folder">
+                    all
+                  </a>
+                </li>
+              </ul>
 
               <Slideshow>
                 <img src="../img/programing.jpg" />
-                <img src="../img/photoshop.jpg" />
-                <img src="../img/programing.jpg" />
-                <img src="../img/photoshop.jpg" />
+                <img src="../img/camera.jpg" />
+                <img src="../img/typo.jpg" />
+                <img src="../img/typo2.jpg" />
               </Slideshow>
-              {/* <div classNameNameName="image main">
-                <span classNameNameName="gallery-img" />
-              </div> */}
             </div>
           </section>
 

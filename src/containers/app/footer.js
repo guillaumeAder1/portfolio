@@ -3,35 +3,35 @@ import style from './constant';
 const Footer = () => {
   return (
     <footer id="footer" style={{ backgroundColor: style.header }}>
-      <div class="inner">
-        <ul class="icons">
+      <div className="inner">
+        <ul className="icons">
           <li>
-            <a href="" class="icon alt fa-twitter">
-              <span class="label">Twitter</span>
+            <a href="" className="icon alt fa-twitter">
+              <span className="label">Twitter</span>
             </a>
           </li>
           <li>
-            <a href="" class="icon alt fa-facebook">
-              <span class="label">Facebook</span>
+            <a href="" className="icon alt fa-facebook">
+              <span className="label">Facebook</span>
             </a>
           </li>
           <li>
-            <a href="" class="icon alt fa-instagram">
-              <span class="label">Instagram</span>
+            <a href="" className="icon alt fa-instagram">
+              <span className="label">Instagram</span>
             </a>
           </li>
           <li>
-            <a href="" class="icon alt fa-github">
-              <span class="label">GitHub</span>
+            <a href="" className="icon alt fa-github">
+              <span className="label">GitHub</span>
             </a>
           </li>
           <li>
-            <a href="" class="icon alt fa-linkedin">
-              <span class="label">LinkedIn</span>
+            <a href="" className="icon alt fa-linkedin">
+              <span className="label">LinkedIn</span>
             </a>
           </li>
         </ul>
-        <ul class="copyright">
+        <ul className="copyright">
           <li>&copy; Untitled</li>
           <li>
             Design: <a href="https://html5up.net">HTML5 UP</a>
