@@ -1,6 +1,8 @@
 import React from 'react';
 import Section from './section';
 import Header from './header';
+import style from './constant';
+
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {
   grey200,
@@ -32,7 +34,7 @@ const muiTheme = getMuiTheme({
 });
 
 const Main = () => (
-  <div id="wrapper">
+  <div id="wrapper" style={{ backgroundColor: style.mainBg }}>
     <Header />
     <Section />
   </div>

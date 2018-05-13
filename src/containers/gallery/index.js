@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Loader from '../hoc/loader.js';
 import Slideshow from './slideshow';
+import style from '../app/constant';
 
 class Gallery extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class Gallery extends Component {
       return <Loader />;
     } else {
       return (
-        <div id="main">
+        <div id="main" style={{ backgroundColor: style.mainBg }}>
           <section id="one">
             <div className="inner">
               <header className="major">
@@ -50,8 +51,9 @@ class Gallery extends Component {
               </div> */}
             </div>
           </section>
+
           <section id="two" className="spotlights">
-            <section>
+            <section style={{ backgroundColor: style.secBg }}>
               <a href="generic.html" className="image">
                 <img
                   src="images/pic08.jpg"
@@ -81,7 +83,7 @@ class Gallery extends Component {
                 </div>
               </div>
             </section>
-            <section>
+            <section style={{ backgroundColor: style.mainBg }}>
               <a href="generic.html" className="image">
                 <img src="images/pic09.jpg" alt="" data-position="top center" />
               </a>
@@ -107,7 +109,7 @@ class Gallery extends Component {
                 </div>
               </div>
             </section>
-            <section>
+            <section style={{ backgroundColor: style.secBg }}>
               <a href="generic.html" className="image">
                 <img src="images/pic10.jpg" alt="" data-position="25% 25%" />
               </a>

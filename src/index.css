@@ -1,3 +1,7 @@
+div#wrapper {
+  filter: blur(0) !important;
+}
+
 img.gallery-img {
   position: absolute;
   clip-path: inset-rectangle(10%, 100%, 10%, 0px);
@@ -29,14 +33,6 @@ div.image:hover .gallery-img,
 div.image:focus .gallery-img {
   transform: scale(1.1);
   filter: blur(5px);
-}
-
-span.gallery-img.is-0 {
-  background-image: url('./assets/img/programing.jpg');
-}
-
-span.gallery-img.is-1 {
-  background-image: url('./assets/img/photoshop.jpg');
 }
 
 /* TRANSITION CSS */

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import style from './constant';
 
 class Header extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class Header extends Component {
   render() {
     return (
       <React.Fragment>
-        <header id="header">
+        <header id="header" style={{ backgroundColor: style.header }}>
           <a href="" className="logo">
             <strong>#portfolio</strong> <span>Guillaume Ader</span>
           </a>
@@ -32,7 +33,7 @@ class Header extends Component {
           </nav>
         </header>
 
-        <nav id="menu">
+        <nav id="menu" style={{ backgroundColor: style.mainBg }}>
           <div className="inner">
             <ul className="links">
               <li>

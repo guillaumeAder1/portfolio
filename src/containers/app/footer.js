@@ -1,7 +1,8 @@
 import React from 'react';
+import style from './constant';
 const Footer = () => {
   return (
-    <footer id="footer">
+    <footer id="footer" style={{ backgroundColor: style.header }}>
       <div class="inner">
         <ul class="icons">
           <li>
