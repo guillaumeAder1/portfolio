@@ -30,7 +30,7 @@ class Gallery extends Component {
           <section id="one">
             <div className="inner">
               <header className="major">
-                <h2>Gallery</h2>
+                <h2>Gallery Works</h2>
               </header>
               <p>
                 Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
