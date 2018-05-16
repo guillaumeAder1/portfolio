@@ -22,11 +22,16 @@ class Gallery extends Component {
     }, 1000);
   }
 
+  resetFilterPosition = () => {
+    document.querySelector('#one ul.actions').style.position = '';
+  };
+
   doScrollTo = () => {
-    // const gallery = document.querySelector('.actions');
     const gallery = document.getElementById('two');
-    if (gallery) gallery.scrollIntoView();
-    console.log('scrollto');
+    if (gallery) {
+      document.querySelector('#one ul.actions').style.position = 'fixed';
+      gallery.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   render() {
@@ -43,53 +48,11 @@ class Gallery extends Component {
               <img src="../img/typo2.jpg" />
             </Slideshow>
           </Header>
-          <section id="one">
-            <div className="inner">
-              <header className="major">
-                <h2>Gallery Works</h2>
-              </header>
-              <p>
-                Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-                magna sed nunc rhoncus condimentum sem. In efficitur ligula tate
-                urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor.
-                Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-                libero. Nullam et orci eu lorem consequat tincidunt vivamus et
-                sagittis magna sed nunc rhoncus condimentum sem. In efficitur
-                ligula tate urna.
-              </p>
-              <ul class="actions">
-                <li>
-                  <a href="#" class="button icon fa-code">
-                    Web
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="button icon fa-github">
-                    Github
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="button icon fa-pencil">
-                    Graphic Design
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="button icon fa-folder">
-                    all
-                  </a>
-                </li>
-              </ul>
-
-              <Slideshow>
-                <img src="../img/programing.jpg" />
-                <img src="../img/camera.jpg" />
-                <img src="../img/typo.jpg" />
-                <img src="../img/typo2.jpg" />
-              </Slideshow>
-            </div>
-          </section>
-
-          <section id="two" className="spotlights">
+          <section
+            id="two"
+            className="spotlights"
+            style={{ paddingTop: '60px' }}
+            onClick={() => this.resetFilterPosition()}>
             <section style={{ backgroundColor: style.secBg }}>
               <a href="generic.html" className="image">
                 <img

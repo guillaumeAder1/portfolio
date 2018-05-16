@@ -1,3 +1,28 @@
+/* css transition text align */
+
+#one ul.actions {
+  z-index: 999;
+  opacity: 0.2;
+  transition: opacity 0.8s ease;
+}
+
+#one ul.actions:hover {
+  opacity: 1;
+}
+
+/* #one ul.actions {
+    text-align: center;
+    width: 0;
+    transition: width .8s ease;
+    display: inline;
+}
+
+#one ul.actions:hover {
+    width: 100%;
+} */
+
+/*  */
+
 div#wrapper {
   filter: blur(0) !important;
 }
